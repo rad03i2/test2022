@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>واجهة عرض المشاريع — نموذج مباشر</title>
+  <meta name="description" content="نموذج تفاعلي لعرض المشاريع الجديدة لحظة بلحظة، مع أحدث مشروع في أعلى القائمة وصورة تقديمية مفرغة تشير إلى المشاريع." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="الصفحة الرئيسية">
+        <span class="brand-mark">R</span>
+        <span>
+          <strong>معرض المشاريع</strong>
+          <small>تحديثات مباشرة</small>
+        </span>
+      </a>
+
+      <div class="live-chip" aria-live="polite">
+        <span class="live-dot"></span>
+        <span>متصل الآن</span>
+      </div>
+    </header>
+
+    <main class="showcase">
+      <section class="feed-panel" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">LIVE PROJECTS</span>
+            <h1 id="projects-title">مشاريع تظهر فور إضافتها</h1>
+            <p>كل مشروع جديد يصعد مباشرة إلى أعلى القائمة، بينما تبقى المشاريع السابقة ظاهرة أسفله.</p>
+          </div>
+
+          <button id="addProjectBtn" class="primary-button" type="button">
+            <span class="button-plus">+</span>
+            إضافة مشروع تجريبي
+          </button>
+        </div>
+
+        <div class="feed-meta">
+          <div class="meta-card">
+            <span>المشاريع الظاهرة</span>
+            <strong id="projectCount">0</strong>
+          </div>
+          <div class="meta-card">
+            <span>آخر تحديث</span>
+            <strong id="lastUpdate">الآن</strong>
+          </div>
+          <button id="autoToggle" class="auto-toggle is-on" type="button" aria-pressed="true">
+            <span class="toggle-indicator"></span>
+            <span>العرض المباشر التجريبي</span>
+          </button>
+        </div>
+
+        <div id="projectFeed" class="project-feed" aria-live="polite"></div>
+      </section>
+
+      <aside class="presenter-panel" aria-label="الصورة التقديمية">
+        <div class="presenter-copy">
+          <span class="mini-label">Portfolio Stream</span>
+          <h2>كل مشروع جديد<br><em>يظهر هنا فورًا</em></h2>
+          <p>واجهة قابلة للربط لاحقًا مع قاعدة بيانات أو GitHub أو أي نظام إدارة محتوى.</p>
+        </div>
+
+        <div class="presenter-stage">
+          <div class="focus-line" aria-hidden="true">
+            <span></span>
+          </div>
+          <div class="person-glow" aria-hidden="true"></div>
+          <img class="presenter-image" src="assets/presenter.png" alt="شخص يشير باتجاه قائمة المشاريع" />
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer-note">
+      <span>نموذج واجهة أولي</span>
+      <span class="footer-separator"></span>
+      <span>قابل للتحويل لاحقًا إلى جزء من موقعك الأساسي</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
